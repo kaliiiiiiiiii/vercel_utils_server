@@ -1,5 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+function escapeSpecialChars(input: string): string {
+    let escaped = input
+        .replace(/`/g, "``")   // Escape backticks
+        .replace(/\$/g, "`$")  // Escape dollar signs
+        .replace(/\+/g, "`+")  // Escape plus signs
+        .replace(/#/g, "`#")   // Escape hash signs
+        .replace(/"/g, '``"')  // Escape double quotes with backticks
+        .replace(/'/g, "''");  // Escape single quotes with two single quotes
+    return escaped;
+  }
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const url = searchParams.get('url');
@@ -12,8 +23,8 @@ export async function GET(req: NextRequest) {
   // Construct the PowerShell script
   const psScript = `
 param (
-    [string]$Url = '${url}',
-    [string[]]$Arguments = @(${args.map(arg => `'${arg}'`).join(', ')})
+    [string]$Url = '${escapeSpecialChars(url)}',
+    [string[]]$Arguments = @(${args.map(arg => `'${escapeSpecialChars(arg)}'`).join(', ')})
 )
 $tempFilePath = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), [System.IO.Path]::GetRandomFileName() + ".exe")
 
