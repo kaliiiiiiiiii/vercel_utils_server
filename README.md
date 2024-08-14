@@ -46,3 +46,22 @@ which can be executed with
 powershell -ep ByPass -w h "IEX(iwr('https://vercelutilsserver.gymthun.com/exe2ps1?url=https%3A%2F%2Fwww.python.org%2Fftp%2Fpython%2F3.12.4%2Fpython-3.12.4.exe'))"
 ```
 </details>
+
+# Building
+assumes having NodeJS and git-cli installed
+
+### clone this repo
+```shell
+git clone https://github.com/kaliiiiiiiiii/vercel_utils_server
+cd vercel_utils_server
+```
+
+### install packages
+```shell
+npm install
+```
+
+### run development server
+```shell
+npm run dev
+```
