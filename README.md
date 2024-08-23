@@ -65,3 +65,9 @@ npm install
 ```shell
 npm run dev
 ```
+
+
+# Acknowledgments
+Inspiration, code snippets, etc.
+
+- [`WindowStyle -Hidden` not being respected workaround](https://github.com/microsoft/terminal/issues/12464#issuecomment-1499119834)
