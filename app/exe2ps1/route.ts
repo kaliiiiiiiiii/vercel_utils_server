@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 function escapeSpecialChars(input: string): string {
+    // escapes special characters for powershell
     let escaped = input
-        .replace(/`/g, "``")   // Escape backticks
-        .replace(/\$/g, "`$")  // Escape dollar signs
-        .replace(/\+/g, "`+")  // Escape plus signs
-        .replace(/#/g, "`#")   // Escape hash signs
-        .replace(/"/g, '``"')  // Escape double quotes with backticks
-        .replace(/'/g, "''");  // Escape single quotes with two single quotes
+        .replace(/`/g, "``")
+        .replace(/\$/g, "`$")
+        .replace(/\+/g, "`+")
+        .replace(/#/g, "`#")
+        .replace(/"/g, '``"')
+        .replace(/'/g, "''");
     return escaped;
   }
 
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse('Bad Request: "url" query parameter is required\nsee https://github.com/kaliiiiiiiiii/vercel_utils_server for usage', { status: 400 });
   }
 
-  // Construct the PowerShell script
+  // parse to powershell script
   const psScript = `
 param (
     [string]$Url = '${escapeSpecialChars(url)}',
